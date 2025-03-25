@@ -9,7 +9,7 @@ namespace StudentProjectManagementAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class TeamMemberController : ControllerBase
     {
         private readonly TeamMemberRepository _teamMemberRepository;

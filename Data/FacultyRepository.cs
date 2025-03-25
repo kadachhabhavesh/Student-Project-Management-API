@@ -53,7 +53,7 @@ namespace StudentProjectManagementAPI.Data
                 await transaction.CommitAsync();
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
                 await transaction.RollbackAsync();
                 return false;

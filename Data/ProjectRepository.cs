@@ -123,7 +123,7 @@ namespace StudentProjectManagementAPI.Data
                     x.StartDate,
                     x.EndDate,
                     x.Status,
-                    progress = ((double)_context.Tasks.Count(t => t.ProjectId == projectId && t.Status == "Completed")/ (double)_context.Tasks.Count(t => t.ProjectId == projectId))*100,
+                    progress = (double)_context.Tasks.Count(t => t.ProjectId == projectId && t.Status == "Completed")!=0 ? ((double)_context.Tasks.Count(t => t.ProjectId == projectId && t.Status == "Completed")/ (double)_context.Tasks.Count(t => t.ProjectId == projectId))*100 : 0,
                     TeamMembers = _context.TeamMembers
                         .Where(tm => tm.ProjectId == projectId)
                         .Include(tm => tm.Student.User)

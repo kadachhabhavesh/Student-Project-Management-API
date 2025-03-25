@@ -8,7 +8,7 @@ namespace StudentProjectManagementAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class TaskController : ControllerBase
     {
         private readonly TaskRepository _taskRepository;

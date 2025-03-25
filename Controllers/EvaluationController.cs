@@ -8,7 +8,7 @@ namespace StudentProjectManagementAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class EvaluationController : ControllerBase
     {
         private readonly EvaluationRepository _evaluationRepository;

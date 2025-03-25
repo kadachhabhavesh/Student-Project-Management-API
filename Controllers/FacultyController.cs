@@ -10,7 +10,7 @@ namespace StudentProjectManagementAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class FacultyController : ControllerBase
     {
         private readonly FacultyRepository _facultyRepository;

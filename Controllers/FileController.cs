@@ -8,7 +8,7 @@ namespace StudentProjectManagementAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class FileController : ControllerBase
     {
         private readonly FileRepository _fileRepository;
